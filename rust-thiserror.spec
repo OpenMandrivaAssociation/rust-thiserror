@@ -6,9 +6,9 @@
 
 Name:           rust-%{crate}
 Version:        1.0.25
-Release:        1%{?dist}
+Release:        1
 Summary:        Derive(Error)
-
+Group:		System/Librariers
 # Upstream license specification: MIT OR Apache-2.0
 License:        MIT or ASL 2.0
 URL:            https://crates.io/crates/thiserror
@@ -29,6 +29,7 @@ Derive(Error).}
 %package        devel
 Summary:        %{summary}
 BuildArch:      noarch
+Group:		Development/Others
 
 %description    devel %{_description}
 
@@ -43,6 +44,7 @@ which use "%{crate}" crate.
 %package     -n %{name}+default-devel
 Summary:        %{summary}
 BuildArch:      noarch
+Group:		Development/Others
 
 %description -n %{name}+default-devel %{_description}
 
@@ -69,62 +71,3 @@ which use "default" feature of "%{crate}" crate.
 %check
 %cargo_test
 %endif
-
-%changelog
-* Sun May 23 2021 Fabio Valentini <decathorpe@gmail.com> - 1.0.25-1
-- Update to version 1.0.25.
-
-* Wed Mar 03 2021 Fabio Valentini <decathorpe@gmail.com> - 1.0.24-1
-- Update to version 1.0.24.
-
-* Wed Jan 27 2021 Fedora Release Engineering <releng@fedoraproject.org> - 1.0.23-2
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
-
-* Sun Dec 27 10:23:56 CET 2020 Igor Raits <ignatenkobrain@fedoraproject.org> - 1.0.23-1
-- Update to 1.0.23 (Fixes: RHBZ#1911019)
-
-* Thu Nov 05 2020 Fabio Valentini <decathorpe@gmail.com> - 1.0.22-1
-- Update to version 1.0.22.
-
-* Wed Oct 07 2020 Fabio Valentini <decathorpe@gmail.com> - 1.0.21-1
-- Update to version 1.0.21.
-
-* Sat Aug 01 2020 Fedora Release Engineering <releng@fedoraproject.org> - 1.0.20-3
-- Second attempt - Rebuilt for
-  https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
-
-* Wed Jul 29 2020 Fedora Release Engineering <releng@fedoraproject.org> - 1.0.20-2
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
-
-* Fri Jun 19 2020 Josh Stone <jistone@redhat.com> - 1.0.20-1
-- Update to 1.0.20
-
-* Fri May 22 2020 Josh Stone <jistone@redhat.com> - 1.0.19-1
-- Update to 1.0.19
-
-* Sat May 16 19:37:39 CEST 2020 Igor Raits <ignatenkobrain@fedoraproject.org> - 1.0.18-1
-- Update to 1.0.18
-
-* Wed May 13 2020 Josh Stone <jistone@redhat.com> - 1.0.17-1
-- Update to 1.0.17
-
-* Wed Apr 29 2020 Josh Stone <jistone@redhat.com> - 1.0.16-1
-- Update to 1.0.16
-
-* Wed Apr 15 2020 Josh Stone <jistone@redhat.com> - 1.0.15-1
-- Update to 1.0.15
-
-* Mon Mar 30 08:09:07 CEST 2020 Igor Raits <ignatenkobrain@fedoraproject.org> - 1.0.14-1
-- Update to 1.0.14
-
-* Mon Mar 23 18:50:14 CET 2020 Igor Raits <ignatenkobrain@fedoraproject.org> - 1.0.13-1
-- Update to 1.0.13
-
-* Sat Mar 21 07:19:21 CET 2020 Igor Raits <ignatenkobrain@fedoraproject.org> - 1.0.12-1
-- Update to 1.0.12
-
-* Tue Feb 18 11:55:16 CET 2020 Igor Raits <ignatenkobrain@fedoraproject.org> - 1.0.11-1
-- Update to 1.0.11
-
-* Fri Feb 14 10:32:34 CET 2020 Igor Raits <ignatenkobrain@fedoraproject.org> - 1.0.10-1
-- Initial package
