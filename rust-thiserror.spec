@@ -5,7 +5,7 @@
 %global crate thiserror
 
 Name:           rust-%{crate}
-Version:        1.0.25
+Version:        1.0.26
 Release:        1
 Summary:        Derive(Error)
 Group:		System/Librariers
